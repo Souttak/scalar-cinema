@@ -1,0 +1,40 @@
+// Create new movie.
+POST http://localhost:3050/api/movies
+content-type: application/json
+
+{
+    "movie_title": "El castillo en el cielo",
+    "movie_release_date": "1986-08-02",
+    "movie_genre": "Fantasía",
+    "movie_plot": "Dos huérfanos, uno de ellos con una piedra de levitación, buscan un tesoro perdido y la clave para su pasado en una legendaria ciudad flotante."
+}
+
+###
+
+// Get all movies.
+GET http://localhost:3050/api/movies
+    ?page=1
+    &limit=5
+
+###
+
+// Get movie by ID.
+GET http://localhost:3050/api/movies/1
+
+###
+
+// Update movie.
+PUT http://localhost:3050/api/movies/4
+content-type: application/json
+
+{
+    "movie_title": "El castillo en el cielo",
+    "movie_release_date": "1986-08-02",
+    "movie_genre": "Fantasía",
+    "movie_plot": "Dos huérfanos, uno de ellos con una piedra de levitación, buscan un tesoro perdido y la clave para su pasado en una legendaria ciudad flotante."
+}
+
+###
+
+// Delete movie.
+DELETE http://localhost:3050/api/movies/4
