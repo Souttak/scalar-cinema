@@ -1,0 +1,9 @@
+# API Port.
+PORT = 3050
+
+# DB Access data.
+DB_HOST = sql10.freesqldatabase.com
+DB_USER = sql10493691
+DB_PASSWORD = S8uew8dVWI
+DB_DATABASE = sql10493691
+DB_PORT = 3306
