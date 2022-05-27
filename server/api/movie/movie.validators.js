@@ -47,6 +47,17 @@ const createMovie = [
     .trim()
     .isLength({ min: 1, max: 65535 })
     .withMessage('El plot puede tener como máximo 65535 carácteres.'),
+
+  check('movie_photo')
+    .exists()
+    .withMessage('Debes ingresar la foto/banner de la película.')
+    .bail()
+    .isString()
+    .withMessage('Tipo de dato incorrecto. Se espera un string.')
+    .bail()
+    .trim()
+    .isURL()
+    .withMessage('La foto/banner debe ser una URL.'),
 ];
 
 const updateMovie = [
@@ -100,6 +111,17 @@ const updateMovie = [
     .trim()
     .isLength({ min: 1, max: 65535 })
     .withMessage('El plot puede tener como máximo 65535 carácteres.'),
+
+  check('movie_photo')
+    .exists()
+    .withMessage('Debes ingresar la foto/banner de la película.')
+    .bail()
+    .isString()
+    .withMessage('Tipo de dato incorrecto. Se espera un string.')
+    .bail()
+    .trim()
+    .isURL()
+    .withMessage('La foto/banner debe ser una URL.'),
 ];
 
 const getMovies = [

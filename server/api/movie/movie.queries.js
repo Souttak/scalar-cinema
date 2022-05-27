@@ -5,7 +5,8 @@ const GET_MOVIES = `
     movie_title,
     DATE_FORMAT(movie_release_date, \'%Y-%m-%d\') AS movie_release_date,
     movie_genre,
-    movie_plot
+    movie_plot,
+    movie_photo
   FROM Movie
 `;
 const GET_MOVIE_BY_ID = `
@@ -14,7 +15,8 @@ const GET_MOVIE_BY_ID = `
     movie_title,
     DATE_FORMAT(movie_release_date, \'%Y-%m-%d\') AS movie_release_date,
     movie_genre,
-    movie_plot
+    movie_plot,
+    movie_photo
   FROM Movie
   WHERE movie_id = ?
 `;
