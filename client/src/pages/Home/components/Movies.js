@@ -29,7 +29,7 @@ function Movies() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const movies = await api.get('/movies', { params: { page: 1, limit: 8 } });
+        const movies = await api.get('/movies', { params: { page: 1, limit: 12 } });
         setMovies(movies.data.data);
       } catch (error) {
         console.log(error);

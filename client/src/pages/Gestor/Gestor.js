@@ -25,7 +25,7 @@ function Gestor() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const movies = await api.get('/movies', { params: { page: 1, limit: 20 } });
+        const movies = await api.get('/movies', { params: { page: 1, limit: 30 } });
         setMovies(movies.data.data);
       } catch (error) {
         console.log(error);
